@@ -63,6 +63,10 @@ int main() {
     Texture2D burber = LoadTextureFromImage(image7);
     UnloadImage(image7);
 
+    Image image8 = LoadImage("resources/bleh.png");
+    Texture2D bleh = LoadTextureFromImage(image8);
+    UnloadImage(image8);
+
     SetTargetFPS(60);
 
     //Button Initialisation--------------------------------------------------------------
@@ -189,18 +193,21 @@ int main() {
             DrawTexture(sisyphus, screenWidth / 2 - sisyphus.width / 2, screenHeight / 2 - sisyphus.height / 2, RAYWHITE);
         }
         if (buttonClicks == 6) {
-            DrawTexture(sadant, screenWidth / 2 - sadant.width / 2, screenHeight / 2 - sadant.height / 2, RAYWHITE);
+            DrawTexture(bleh, screenWidth / 2 - bleh.width / 2, screenHeight / 2 - bleh.height / 2, RAYWHITE);
         }
         if (buttonClicks == 8) {
-            DrawTexture(burber, screenWidth / 2 - burber.width / 2, screenHeight / 2 - burber.height / 2, RAYWHITE);
+            DrawTexture(sadant, screenWidth / 2 - sadant.width / 2, screenHeight / 2 - sadant.height / 2, RAYWHITE);
         }
         if (buttonClicks == 10) {
-            DrawTexture(lmao, screenWidth / 2 - lmao.width / 2, screenHeight / 2 - lmao.height / 2, RAYWHITE);
+            DrawTexture(burber, screenWidth / 2 - burber.width / 2, screenHeight / 2 - burber.height / 2, RAYWHITE);
         }
         if (buttonClicks == 12) {
-            DrawTexture(eepy, screenWidth / 2 - eepy.width / 2, screenHeight / 2 - eepy.height / 2, RAYWHITE);
+            DrawTexture(lmao, screenWidth / 2 - lmao.width / 2, screenHeight / 2 - lmao.height / 2, RAYWHITE);
         }
         if (buttonClicks == 14) {
+            DrawTexture(eepy, screenWidth / 2 - eepy.width / 2, screenHeight / 2 - eepy.height / 2, RAYWHITE);
+        }
+        if (buttonClicks == 15) {
             DrawTexture(buried, screenWidth / 2 - buried.width / 2, screenHeight / 2 - buried.height / 2, RAYWHITE);
         }
         
@@ -214,6 +221,7 @@ int main() {
     UnloadTexture(sisyphus);
     UnloadTexture(bob);
     UnloadTexture(burber);
+    UnloadTexture(bleh);
 
 
     CloseWindow();
